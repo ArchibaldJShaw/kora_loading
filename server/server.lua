@@ -5,7 +5,7 @@ AddEventHandler('playerConnecting', function(_, _, deferrals)
     if not deferrals or not deferrals.handover then return end
     local ok, payload = pcall(KoraLoading.payload)
     if not ok then
-        print(('^3[kora_loading] could not build the loading-screen settings: %s^7'):format(payload))
+        Kora.logging.warn('payload.build_failed', 'Could not build the loading-screen settings', { error = tostring(payload) })
         return
     end
     deferrals.handover({ kora_loading = payload })

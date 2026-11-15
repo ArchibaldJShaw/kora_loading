@@ -1,0 +1,3 @@
+# path:reason
+html/app.js:loadscreen page runs before other resources are mounted; the kora_lib NUI logging adapter and nui.lua transport are unreachable here (loadscreen is not the resource ui_page), so console.warn stays
+html/kora_theme/theme.js:synced vendored copy of kora_theme's theme.js (refreshed by tools/sync-theme.mjs, never edited by hand)
